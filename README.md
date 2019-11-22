@@ -17,4 +17,7 @@
     alias relaxed="sudo docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) --name relaxed relaxed $@"
 ```
 
-Vous pouvez maintenant modifier les fichiers PUG et générer des PDF avec RelaxedJS très simplement.
+4. Vous pouvez maintenant modifier les fichiers PUG et générer des PDF avec RelaxedJS très simplement.
+``` shell script
+    relaxed Standards-raccordement/index.pug --no-sandbox
+```
