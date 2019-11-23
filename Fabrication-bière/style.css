@@ -1,0 +1,22 @@
+.logo
+{
+float: left;
+right:10px; 
+top:0; 
+width: 100px;
+height: 100px;
+}
+
+#title
+{
+position: relative; 
+}
+
+.content
+{
+clear:both;
+font-size: 18px;
+text-align: justify;
+margin: 20px;
+margin-top:100px;
+}
