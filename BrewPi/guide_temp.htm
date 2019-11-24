@@ -1,0 +1,317 @@
+
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        
+      </head>
+      <body> <div class="report-sidebar"><p>Comment créer sa brasserie de A à Z ?</p></div><h1 id="title">BrewPi & BrewBlox</h1><div class="summary ui piled segment"><span>Dans cette partie, nous allons détailler ce que sont les projets open source BrewPi et BrewBlox puis expliquer pourquoi on les utilise ainsi que leur fonctionnement
+
+</span></div><h2>Qu'est-ce que BrewPi et BrewBlox ?</h2>
+<h3>BrewPi</h3>
+<p>BrewPi est un projet open source regroupant des composants logiciels comme un firmware, une interface web et un composant hardware comme le contrôleur BrewPi Spark 3.
+Ce dernier est un contrôleur de température qui contrôle votre bière ou votre vin avec une précision de 0.1°C. Il envoie les données à un RaspberryPi qui affichera un panneau d'administration
+avec des graphiques dans votre navigateur.</p>
+<h3>BrewBlox</h3>
+<p>BrewBlox est un logiciel permettant de surveiller et de contrôler l'ensemble des processus et des composants d'une brasserie depuis un tableau de bord unifié.</p>
+<p>Maintenant, intéressons-nous à leur fonctionnement et leur interaction.</p><!-- Bloc d'information--><div class="ui container"><div class="ui icon message yellow block-center"><i class="lightbulb outline icon"></i><div class="content"><div class="header">Le saviez-vous ?</div><p></p>Le projet BrewPi est développé par une petite entreprise située aux Pays-Bas. Leur but est d'aider les brasseurs amateurs et indépendants.
+Pour accomplir cet objectif, ils créent des composants logiciels et matériel open source depuis 2012 pour des petites brasseries.</div></div></div><div class="illustration float-left width-8cm ui raised segment"><img src="images/brewpi-schema.png"/><figcaption><div class="reference">Illustration 1</div><div class="title">Schéma de fonctionnement</div></figcaption></div><h2>Comment ça marche ?</h2>
+<h3>BrewPi</h3>
+<p>Here are a few highlights of what you may win, or lose, using ReLaXed instead
+of another solution. This section is of course open to contributions.</p>
+<p>Let us start with Markdown. This widely supported language (Github, NPM, etc.)
+became very popular due to its simple and friendly syntax close to plain text.
+Markdown also has cool editors and extensions. One example is
+<a href="https://atom.io/packages/markdown-preview-enhanced"><code>markdown-preview-enhanced</code></a>
+which can render plots, flowcharts, and equations.</p>
+<p>ReLaXed has been specially extended so that it could support plot, flowchart,
+and equations (using the same underlying libraries as
+markdown-preview-enhanced), as illustrated in Figure 1. In addition, ReLaXed
+allows you to write any kind of layout with boxes, sidebars, etc. HTML
+elements are more fun to write with Pug (in markdown, HTML elements must be
+written in plain HTML). You can define macros, use conditionals and loops, use
+computed expressions using Javascript , and ReLaXed supports (S)CSS which is
+pretty cool. Last but not least, you can write parts in markdown if you want
+to <i class="em em-wink"></i> . Yep, that was an emoji. Cost us one line of
+code, to import <a href="https://afeld.github.io/emoji-css/">Emoji CSS</a> as a
+stylesheet.</p>
+<p>Now what about LaTeX ? Sure, LaTeX is wide-spread in academic and publishing
+communities, where it's typography and layout optimizations, and its
+bibliography management tool are very appreciated. But LaTeX is also known for
+its cryptic errors, its complex advanced syntax which not many make the effort
+to learn, and as a consequence not many LaTeX venture on the creative side
+with their own themes and layouts.</p>
+<p>Certainly the letter and paragraph spacings won't be as nice in ReLaXed (but
+Google Chrome is still doing a very good job), but the syntax, clear error
+messages, etc. will certainly make  you happier. ReLaXed is also possibly
+faster to render big documents (not entirely sure though <i class="em
+em-thinking_face"></i>).</p>
+<template id="page-footer"><style type="text/css">.pdfheader {
+  font-size: 10px;
+  color: #aaa;
+  font-family: Helvetica;
+  font-weight: bold;
+  width: 1000px;
+  border-top: 1px solid #aaa;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 1mm;
+  margin-bottom: -1mm;
+  text-align: center;
+}
+</style><div class="pdfheader">Page <span class="pageNumber"></span> / <span class="totalPages"></span></div></template><style>@import 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css';
+@import 'https://afeld.github.io/emoji-css/emoji.css';
+@page {
+  margin: 1cm 1cm 2cm 0cm; }
+
+html {
+  padding-left: 1cm;
+  padding-right: 1cm;
+  font-family: 'Lato';
+  font-size: 14px !important; }
+
+body {
+  margin-left: 1cm; }
+
+#title {
+  font-weight: bold;
+  font-size: 2.5em; }
+
+.summary {
+  background-color: #a0cbf3; }
+
+h2 {
+  font-size: 1.8em; }
+
+p {
+  line-height: 1.5em;
+  font-size: 1.1em !important;
+  text-align: justify; }
+
+a {
+  text-decoration: underline;
+  color: inherit; }
+
+.report-sidebar {
+  position: fixed;
+  left: -0.25in;
+  top: 0;
+  width: 0.25in;
+  height: 943px;
+  writing-mode: vertical-rl;
+  border-top: 0.25in solid transparent;
+  border-left: 0.25in solid #3891e5;
+  border-bottom: 0.25in solid transparent; }
+  .report-sidebar p {
+    text-align: center;
+    color: #92c3f1;
+    margin-top: -1.55em; }
+
+.block-center {
+  display: block;
+  margin: 0 auto; }
+
+.mermaid-svg {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+  .mermaid-svg .node rect {
+    fill: none;
+    rx: 5px;
+    ry: 5px;
+    stroke: black; }
+  .mermaid-svg .edgelabel {
+    background: white;
+    color: #444; }
+
+.message,
+figure {
+  page-break-inside: avoid; }
+
+.message {
+  margin-bottom: 1em !important; }
+
+.illustration {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em; }
+  .illustration.float-left {
+    margin-left: -1em !important;
+    margin-right: 2em !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    float: left; }
+  .illustration img {
+    width: 100%; }
+  .illustration figcaption {
+    font-size: 0.75em;
+    text-align: justify;
+    width: 100%;
+    margin-top: 0.5em; }
+  .illustration > .reference,
+  .illustration .title {
+    font-weight: bold;
+    display: inline;
+    margin-right: 0.5em; }
+  .illustration > .reference {
+    color: black; }
+    .illustration > .reference::after {
+      content: ': '; }
+  .illustration > .title {
+    color: #030f1b; }
+  .illustration > .caption {
+    display: inline; }
+
+figure {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em; }
+  figure > .panel {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%; }
+    figure > .panel > .label {
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  figure.float-left {
+    margin-left: -1em !important;
+    margin-right: 2em !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    float: left; }
+  figure figcaption {
+    font-size: 0.75em;
+    text-align: justify;
+    width: 100%;
+    margin-top: 1em; }
+    figure figcaption > .reference,
+    figure figcaption .title {
+      font-weight: bold;
+      display: inline;
+      margin-right: 0.5em; }
+    figure figcaption > .reference {
+      color: black; }
+      figure figcaption > .reference::after {
+        content: ': '; }
+    figure figcaption > .title {
+      color: #030f1b; }
+    figure figcaption > .caption {
+      display: inline; }
+
+.width-1cm {
+  width: 10mm !important; }
+
+.width-2cm {
+  width: 20mm !important; }
+
+.width-3cm {
+  width: 30mm !important; }
+
+.width-4cm {
+  width: 40mm !important; }
+
+.width-5cm {
+  width: 50mm !important; }
+
+.width-6cm {
+  width: 60mm !important; }
+
+.width-7cm {
+  width: 70mm !important; }
+
+.width-8cm {
+  width: 80mm !important; }
+
+.width-9cm {
+  width: 90mm !important; }
+
+.width-10cm {
+  width: 100mm !important; }
+
+.width-11cm {
+  width: 110mm !important; }
+
+.width-12cm {
+  width: 120mm !important; }
+
+.width-13cm {
+  width: 130mm !important; }
+
+.width-14cm {
+  width: 140mm !important; }
+
+.width-15cm {
+  width: 150mm !important; }
+
+.width-16cm {
+  width: 160mm !important; }
+
+.width-17cm {
+  width: 170mm !important; }
+
+.width-18cm {
+  width: 180mm !important; }
+
+.width-19cm {
+  width: 190mm !important; }
+
+.top-1mm {
+  margin-top: 1mm; }
+
+.top-2mm {
+  margin-top: 2mm; }
+
+.top-3mm {
+  margin-top: 3mm; }
+
+.top-4mm {
+  margin-top: 4mm; }
+
+.top-5mm {
+  margin-top: 5mm; }
+
+.top-6mm {
+  margin-top: 6mm; }
+
+.top-7mm {
+  margin-top: 7mm; }
+
+.top-8mm {
+  margin-top: 8mm; }
+
+.top-9mm {
+  margin-top: 9mm; }
+
+.top-10mm {
+  margin-top: 10mm; }
+
+.top-11mm {
+  margin-top: 11mm; }
+
+.top-12mm {
+  margin-top: 12mm; }
+
+.top-13mm {
+  margin-top: 13mm; }
+
+.top-14mm {
+  margin-top: 14mm; }
+
+.top-15mm {
+  margin-top: 15mm; }
+
+.top-16mm {
+  margin-top: 16mm; }
+
+.top-17mm {
+  margin-top: 17mm; }
+
+.top-18mm {
+  margin-top: 18mm; }
+
+.top-19mm {
+  margin-top: 19mm; }
+</style> </body>
+    </html>
