@@ -6,7 +6,7 @@
       </head>
       <body> <div class="report-sidebar"><p>Comment créer sa brasserie de A à Z ?</p></div><h1 id="title">BrewPi & BrewBlox</h1><div class="summary ui piled segment"><span>Dans cette partie, nous allons détailler ce que sont les projets open source BrewPi et BrewBlox puis expliquer pourquoi on les utilise ainsi que leur fonctionnement
 
-</span></div><h2>Qu'est-ce que BrewPi et BrewBlox ?</h2>
+</span></div><div class="illustration float-left width-4cm ui raised segment"><img src="images/spark-3.png"/><figcaption><div class="reference">Illustration 1</div><div class="title">BrewPi Spark 3</div></figcaption></div><h2>Qu'est-ce que BrewPi et BrewBlox ?</h2>
 <h3>BrewPi</h3>
 <p>BrewPi est un projet open source regroupant des composants logiciels comme un firmware, une interface web et un composant hardware comme le contrôleur BrewPi Spark 3.
 Ce dernier est un contrôleur de température qui contrôle votre bière ou votre vin avec une précision de 0.1°C. Il envoie les données à un RaspberryPi qui affichera un panneau d'administration
@@ -14,7 +14,7 @@ avec des graphiques dans votre navigateur.</p>
 <h3>BrewBlox</h3>
 <p>BrewBlox est un logiciel permettant de surveiller et de contrôler l'ensemble des processus et des composants d'une brasserie depuis un tableau de bord unifié.</p>
 <p>Maintenant, intéressons-nous à leur fonctionnement et leur interaction.</p><!-- Bloc d'information--><div class="ui container"><div class="ui icon message yellow block-center"><i class="lightbulb outline icon"></i><div class="content"><div class="header">Le saviez-vous ?</div><p></p>Le projet BrewPi est développé par une petite entreprise située aux Pays-Bas. Leur but est d'aider les brasseurs amateurs et indépendants.
-Pour accomplir cet objectif, ils créent des composants logiciels et matériel open source depuis 2012 pour des petites brasseries.</div></div></div><div class="illustration float-left width-8cm ui raised segment"><img src="images/brewpi-schema.png"/><figcaption><div class="reference">Illustration 1</div><div class="title">Schéma de fonctionnement</div></figcaption></div><h2>Comment ça marche ?</h2>
+Pour accomplir cet objectif, ils créent des composants logiciels et matériel open source depuis 2012 pour des petites brasseries.</div></div></div><div class="illustration float-left width-8cm ui raised segment"><img src="images/brewpi-schema.png"/><figcaption><div class="reference">Illustration 2</div><div class="title">Schéma de fonctionnement</div></figcaption></div><h2>Comment ça marche ?</h2>
 <h3>BrewPi</h3>
 <p>Here are a few highlights of what you may win, or lose, using ReLaXed instead
 of another solution. This section is of course open to contributions.</p>
@@ -133,9 +133,10 @@ figure {
 .illustration {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  padding: 0.5em; }
+  padding: 0.1em;
+  page-break-inside: avoid; }
   .illustration.float-left {
-    margin-left: -1em !important;
+    margin-left: -0.5em !important;
     margin-right: 2em !important;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -181,6 +182,8 @@ figure {
     margin-top: 1em;
     margin-bottom: 1em;
     float: left; }
+  figure img {
+    width: 100%; }
   figure figcaption {
     font-size: 0.75em;
     text-align: justify;
