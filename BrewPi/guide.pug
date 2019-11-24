@@ -23,6 +23,7 @@ h1#title BrewPi & BrewBlox
 
   ### BrewBlox
   BrewBlox est un logiciel permettant de surveiller et de contrôler l'ensemble des processus et des composants d'une brasserie depuis un tableau de bord unifié.
+  Il fait partie du projet BrewPi.
   
 p Maintenant, intéressons-nous à leur fonctionnement et leur interaction.
 //-
@@ -87,46 +88,45 @@ p Maintenant, intéressons-nous à leur fonctionnement et leur interaction.
     img(src="images/brewpi-schema.png")
     figcaption
       .reference Illustration 2
-      .title Schéma de fonctionnement
+      .title Schéma de fonctionnement de BrewPi
 
 :markdown-it(html=true)
 
   ## Comment ça marche ?
   ### BrewPi
 
-  Here are a few highlights of what you may win, or lose, using ReLaXed instead
-  of another solution. This section is of course open to contributions.
+  Tout d'abord, afin de contrôler la température de votre bière en train de fermenter, vous avez besoin
+  d'un moyen pour la refroidir ou la chauffer. Cela se fait généralement en modifiant un réfrigérateur pour y installer un appareil de chauffage
+  à l'intérieur et permettre à BrewPi de contrôler le compresseur.
 
-  Let us start with Markdown. This widely supported language (Github, NPM, etc.)
-  became very popular due to its simple and friendly syntax close to plain text.
-  Markdown also has cool editors and extensions. One example is
-  [``markdown-preview-enhanced``](https://atom.io/packages/markdown-preview-enhanced)
-  which can render plots, flowcharts, and equations.
+  Ensuite, le contrôleur BrewPi Spark va récupérer la valeur de température issue des capteurs dans la bière et dans le réfrigérateur.
+  Il allumera ou éteindra le dispositif de chauffage et le refroidisseur lorsque cela est nécessaire.
 
-  ReLaXed has been specially extended so that it could support plot, flowchart,
-  and equations (using the same underlying libraries as
-  markdown-preview-enhanced), as illustrated in Figure 1. In addition, ReLaXed
-  allows you to write any kind of layout with boxes, sidebars, etc. HTML
-  elements are more fun to write with Pug (in markdown, HTML elements must be
-  written in plain HTML). You can define macros, use conditionals and loops, use
-  computed expressions using Javascript , and ReLaXed supports (S)CSS which is
-  pretty cool. Last but not least, you can write parts in markdown if you want
-  to <i class="em em-wink"></i> . Yep, that was an emoji. Cost us one line of
-  code, to import [Emoji CSS](https://afeld.github.io/emoji-css/) as a
-  stylesheet.
+  Le Raspberry Pi communique avec le BrewPi Spark par USB et enregistre les données de brassage. Il se connecte à votre réseau domestique et exécute le serveur web central de BrewPi.
+  Ce serveur héberge l'interface web qui permet de surveiller et contrôler votre brassage via votre navigateur. 
+  
+  Enfin, depuis n'importe quel autre appareil, vous pouvez accéder à la page web servie par le Raspberry Pi.
+  Sur celle-ci, vous pouvez démarrer ou arrêter le brassage, modifier le profil de température, afficher les graphiques et modifier les paramètres. <i class="em
+  em-wink"></i>
 
-  Now what about LaTeX ? Sure, LaTeX is wide-spread in academic and publishing
-  communities, where it's typography and layout optimizations, and its
-  bibliography management tool are very appreciated. But LaTeX is also known for
-  its cryptic errors, its complex advanced syntax which not many make the effort
-  to learn, and as a consequence not many LaTeX venture on the creative side
-  with their own themes and layouts.
+  ### BrewBlox
+  Ce logiciel fournit l'interface web ou le tableau de bord. Il s'installe sur le Raspberry Pi ou un ordinateur quelconque.
+  
 
-  Certainly the letter and paragraph spacings won't be as nice in ReLaXed (but
-  Google Chrome is still doing a very good job), but the syntax, clear error
-  messages, etc. will certainly make  you happier. ReLaXed is also possibly
-  faster to render big documents (not entirely sure though <i class="em
-  em-thinking_face"></i>).
+// Bloc d'information
+.ui.container
+  .ui.icon.message.yellow.block-center
+    i.lightbulb.outline.icon
+    .content
+      .header 
+      p Les modèles Raspberry Pi suivants ne sont pas compatibles avec BrewBlox :
+        ul
+          li Raspberry Pi 1 Model A
+          li Raspberry Pi 1 Model B
+          li Raspberry Pi Zero
+          li Raspberry Pi Zero W
+
+      
 
 template#page-footer
   style(type='text/css').
