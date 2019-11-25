@@ -2,6 +2,11 @@
 
 ## Comment installer RelaxedJS et commencer à contribuer (Avec Docker) ?
 
+Attention : N'oubliez pas de vérifier que votre compte utilisateur fasse bien partie du groupe "docker" pour pouvoir exécuter Docker sans être en super-administrateur avec sudo. Si ce n'est pas le cas, tapez la commande suivante :
+``` shell script
+    sudo usermod -aG docker $USER
+```
+
 1. Clonez le dépot Git.
 ``` shell script
     git clone https://github.com/YanisLeroy/Guide-brasserie.git
