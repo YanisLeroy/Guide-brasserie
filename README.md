@@ -1,6 +1,6 @@
 # Guide "Comment créer sa brasserie de A à Z"
 
-## Comment installer RelaxedJS et commencer à contribuer ?
+## Comment installer RelaxedJS et commencer à contribuer (Avec Docker) ?
 
 1. Clonez le dépot Git.
 ``` shell script
@@ -20,4 +20,24 @@
 4. Vous pouvez maintenant modifier les fichiers PUG et générer des PDF avec RelaxedJS très simplement.
 ``` shell script
     relaxed Standards-raccordement/index.pug --no-sandbox
+```
+
+## Comment installer RelaxedJS et commencer à contribuer (Avec NodeJS) ?
+
+1. Installer NodeJS
+``` curl-sL https://deb.nodesource.com/setup_8.x |sudo-Ebash- 
+    sudo apt install -y nodejs
+```
+
+2. Installer Git
+``` apt-get install git
+```
+
+3. Installer RelaxedJS
+``` npm i -g relaxedjs
+```
+
+4. Vous pouvez maintenant modifier les fichiers PUG et générer des PDF avec RelaxedJS très simplement.
+```
+    relaxed Standards-raccordement/index.pug
 ```
