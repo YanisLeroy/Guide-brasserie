@@ -25,19 +25,22 @@
 ## Comment installer RelaxedJS et commencer à contribuer (Avec NodeJS) ?
 
 1. Installer NodeJS
-``` curl-sL https://deb.nodesource.com/setup_8.x |sudo-Ebash- 
+``` shell script
+    curl-sL https://deb.nodesource.com/setup_8.x |sudo-Ebash- 
     sudo apt install -y nodejs
 ```
 
 2. Installer Git
-``` apt-get install git
+``` shell script
+    apt-get install git
 ```
 
 3. Installer RelaxedJS
-``` npm i -g relaxedjs
+```shell script 
+    npm i -g relaxedjs
 ```
 
 4. Vous pouvez maintenant modifier les fichiers PUG et générer des PDF avec RelaxedJS très simplement.
-```
+``` shell script
     relaxed Standards-raccordement/index.pug
 ```
