@@ -9,12 +9,12 @@
 
 2. Construisez l'image Docker de RelaxedJS.
 ``` shell script
-    cd Guide-brasserie && sudo docker build -t relaxed
+    cd Guide-brasserie && docker build -t relaxed
 ```
 
 3. Pour simplifier l'utilisation, créez un alias pour la commande.
 ``` shell script
-    alias relaxed="sudo docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) --name relaxed relaxed $@"
+    alias relaxed="docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) --name relaxed relaxed $@"
 ```
 
 4. Vous pouvez maintenant modifier les fichiers PUG et générer des PDF avec RelaxedJS très simplement.
