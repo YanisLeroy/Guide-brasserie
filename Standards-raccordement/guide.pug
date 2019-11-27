@@ -1,0 +1,91 @@
+.report-sidebar: p Comment créer sa brasserie de A à Z ?
+
+h1#title Les standards de raccordements
+
+.summary.ui.piled.segment: span.
+
+  Dans cette partie sont décrits les grands standards de raccordements industriels ainsi que leurs avantages et inconvénients dans le cadre de l'usage d'une brasserie.
+
+.ui.container
+  .ui.icon.message.yellow.block-center
+    i.lightbulb.outline.icon
+    .content
+      .header Nos conseils
+      p
+      | Les raccords SMS et CLAMP sont les plus recommandés.<br />
+      | Ne pas mélanger les normes : une fois un type de raccordement choisi, la garder tout le long de la vie de la brasserie.
+
+table
+  tr
+    td
+      .illustration.float-left.width-5cm.ui.raised.segment
+        img(src="MACON/macon-photo.png")
+        img(src="MACON/macon-coupe.png")
+    td
+      :markdown-it
+        ### Raccord Macon
+          Raccord adapté pour l’alimentaire et utilisée dans le viticole. Très spécifique, il est fortement déconseillé pour son coût important et sa rareté. Il nécessite un dégagement vers l'arrière pour être démontable et il faut une clé pour serrer/déverrouiller le raccord.
+    tr
+      td
+        .illustration.float-left.width-5cm.ui.raised.segment
+          img(src="SMS/SMS-photo.png")
+          img(src="SMS/SMS-coupe.png")    
+      td
+        :markdown-it
+          ### Raccord SMS
+            Raccord alimentaire utilisé essentiellement en France, dans les laiteries et autres industries agroalimentaires. Il est facilement manipulable à une main. 
+            En dehors de la France et des pays d’Europe du Nord, il est difficile de trouver des pièces d’occasion. Il est composé d’un côté mâle et d’un côté femelle, il est donc essentiel d’avoir les 2.  Il est nécessaire d’avoir une clé pour serrer/déverrouiller le raccord.
+    tr
+      td
+        .illustration.float-left.width-5cm.ui.raised.segment
+          img(src="DIN/DIN-photo.png")
+          img(src="DIN/DIN-coupe.png")
+      td
+        :markdown-it
+          ### Raccord DIN
+            Raccord alimentaire utilisé en laiterie et autres industries agroalimentaires, très répandu en Europe sauf en France. Il est facilement manipulable à une main. 
+            Les raccords DIN sont un peu plus cher que les SMS. Composé d’un côté mâle et d’un côté femelle, il est donc essentiel d’avoir les 2. Il nécessite un dégagement vers l’arrière pour être démontable et il faut une clé pour serrer/déverrouiller le raccord.
+    tr
+      td
+        .illustration.float-left.width-5cm.ui.raised.segment
+          img(src="CLAMP/CLAMP-photo.png")
+          img(src="CLAMP/CLAMP-coupe.png")
+      td
+        :markdown-it
+          ### Raccord CLAMP
+            Raccord spécifique adapté aux industries pharmaceutiques et alimentaires. C'est le plus hygiénique de tous. Il existe des raccords clamps pour toutes les gammes de diamètres de tubes (DIN, ISO, SMS, etc...). Il n’y a pas de mâle/femelle, le raccordement est donc facile.
+            Il est difficile de trouver des pièces en France mais il permet de s’ouvrir facilement à du matériel extérieur de l’international (notamment USA et Asie). Il est difficile de le  manipuler à une main.
+
+    tr
+      td
+        .illustration.float-left.width-5cm.ui.raised.segment
+          img(src="CAMLOCK/CAMLOCK-photo.png")
+          img(src="CAMLOCK/CAMLOCK-coupe.png")
+      td
+        :markdown-it
+          ### Raccord CAMLOCK
+            Raccord alimentaire beaucoup moins cher que les raccords industriels (solution adaptée entre le brasseur amateur et l’entrée de gamme professionnelle). Il est facile à manipuler.
+
+
+      
+
+template#page-footer
+  style(type='text/css').
+    .pdfheader {
+      font-size: 10px;
+      color: #aaa;
+      font-family: Helvetica;
+      font-weight: bold;
+      width: 1000px;
+      border-top: 1px solid #aaa;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-top: 1mm;
+      margin-bottom: -1mm;
+      text-align: center;
+    }
+  
+  .pdfheader Page #[span.pageNumber] / #[span.totalPages]
+
+style
+  include:scss guide.scss
