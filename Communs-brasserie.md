@@ -14,7 +14,7 @@ Les fonctionnalités sont similaires à celles de BrewPi : contrôle des tempér
 
 Site internet : http://web.craftbeerpi.com/
 
-##MashBerry
+## MashBerry
 
 MashBerry est un contrôleur de brassage de bière dont le fonctionnement est basé sur un Raspberry PI. Le système est conçu pour automatiser le processus de brassage de bière.
 La température est contrôlée à l’aide d’un régulateur PID, la mesure de la température se fait avec un PT1000 ou un Dallas 18B20.
