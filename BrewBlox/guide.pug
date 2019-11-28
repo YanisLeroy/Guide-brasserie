@@ -1,6 +1,6 @@
 .report-sidebar: p Comment créer sa brasserie de A à Z ?
 
-h1#title BrewPi & BrewBlox
+h1#title BrewBlox
 
 .summary.ui.piled.segment: span.
 
@@ -15,15 +15,12 @@ h1#title BrewPi & BrewBlox
 
 :markdown-it
 
-  ## Qu'est-ce que BrewPi et BrewBlox ?
-  ### BrewPi
-  BrewPi est un projet open source regroupant des composants logiciels comme un firmware, une interface web et un composant hardware comme le contrôleur BrewPi Spark 3.
+  ## Qu'est-ce que BrewBlox ?
+  BrewBlox est un projet open source regroupant des composants logiciels comme un firmware, une interface web et un composant hardware comme le contrôleur BrewPi Spark 3.
   Ce dernier est un contrôleur de température qui contrôle votre bière ou votre vin avec une précision de 0.1°C. Il envoie les données à un RaspberryPi qui affichera un panneau d'administration 
   avec des graphiques dans votre navigateur.
 
-  ### BrewBlox
-  BrewBlox est un logiciel permettant de surveiller et de contrôler l'ensemble des processus et des composants d'une brasserie depuis un tableau de bord unifié.
-  Il fait partie du projet BrewPi.
+  BrewBlox permet de surveiller et de contrôler l'ensemble des processus et des composants d'une brasserie depuis un tableau de bord unifié.
   
 p Maintenant, intéressons-nous à leur fonctionnement et leur interaction.
 //-
@@ -64,7 +61,7 @@ p Maintenant, intéressons-nous à leur fonctionnement et leur interaction.
     .content
       .header Le saviez-vous ?
       p
-      | Le projet BrewPi est développé par une petite entreprise située aux Pays-Bas. Leur but est d'aider les brasseurs amateurs et indépendants.
+      | Le projet BrewBlox est développé par une petite entreprise située aux Pays-Bas. Leur but est d'aider les brasseurs amateurs et indépendants.
       | Pour accomplir cet objectif, ils créent des composants logiciels et matériel open source depuis 2012 pour des petites brasseries.
 //-
     figure.float-left.width-8cm.ui.raised.segment
@@ -93,7 +90,6 @@ p Maintenant, intéressons-nous à leur fonctionnement et leur interaction.
 :markdown-it(html=true)
 
   ## Comment ça marche ?
-  ### BrewPi
 
   Tout d'abord, afin de contrôler la température de votre bière en train de fermenter, vous avez besoin
   d'un moyen pour la refroidir ou la chauffer. Cela se fait généralement en modifiant un réfrigérateur pour y installer un appareil de chauffage
@@ -103,14 +99,12 @@ p Maintenant, intéressons-nous à leur fonctionnement et leur interaction.
   Il allumera ou éteindra le dispositif de chauffage et le refroidisseur lorsque cela est nécessaire.
 
   Le Raspberry Pi communique avec le BrewPi Spark par USB et enregistre les données de brassage. Il se connecte à votre réseau domestique et exécute le serveur web central de BrewPi.
-  Ce serveur héberge l'interface web qui permet de surveiller et contrôler votre brassage via votre navigateur. 
+  Ce serveur héberge l'interface web ou le tableau de bord qui permet de surveiller et contrôler votre brassage via votre navigateur. 
+  Il s'installe sur le Raspberry Pi ou un ordinateur quelconque.
   
   Enfin, depuis n'importe quel autre appareil, vous pouvez accéder à la page web servie par le Raspberry Pi.
   Sur celle-ci, vous pouvez démarrer ou arrêter le brassage, modifier le profil de température, afficher les graphiques et modifier les paramètres. <i class="em
   em-wink"></i>
-
-  ### BrewBlox
-  Ce logiciel fournit l'interface web ou le tableau de bord. Il s'installe sur le Raspberry Pi ou un ordinateur quelconque.
   
 
 // Bloc d'information

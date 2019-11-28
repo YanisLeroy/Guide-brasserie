@@ -1,0 +1,86 @@
+.report-sidebar: p Comment créer sa brasserie de A à Z ?
+
+h1#title Le Système de Refroidissement
+
+.summary.ui.piled.segment: span.
+
+  Dans cette partie, nous allons détailler la constitution du groupe 
+  froid puis expliquer comment s'effectue la régulation de la température 
+  ainsi que quelques détails sur la matériel utilisé. Enfin, un schéma de fonctionnement de l'ensemble du système.
+
+:markdown-it
+
+  ## Le groupe froid
+  Il est constitué de :
+  - Une **tireuse à bière de bar** en retirant les serpentins à l’intérieur.
+  - Une **pompe de circulation**.
+
+// Bloc d'information
+.ui.container
+  .ui.icon.message.blue.block-center
+    i.info.outline.icon
+    .content
+      .header Informations utiles
+      ul
+        li Mettre le groupe froid au maximum <i>(de -5°C à -10°C)</i>.
+        li Afin que l'eau ne gèle pas, ajouter du <b>glycol</b> afin de faire baisser le point de fusion.
+        li N'hésitez pas à consulter une table de correspondance permettant de connaître la quantité de glycol à diluer pour avoir la température désirée.
+     
+// Bloc d'avertissement
+.ui.container
+  .ui.icon.message.orange.block-center
+    i.warning.outline.icon
+    .content
+      .header Attention !
+      ul
+        li Ce système fonctionne si la température moyenne ambiante est <b>tempérée</b> <i>(environ 20°C par exemple)</i>. S’il fait trop chaud, ce ne sera pas suffisant.
+        li Pour le groupe froid, la pompe utilisée pour le départ de l'eau froide <b>doit être placée le plus loin possible du point de retour</b> <i>(afin de ne pas créer de boucle et de réutiliser toujours la même eau)</i>.
+        li <b>Ne pas placer le groupe froid à côté d'un mur et/ou à côté de la cuve à refroidir</b> car le système dégage beaucoup de chaleur. Il faut faire en sorte que la chaleur soit bien évacuée.
+
+
+:markdown-it(html=true)
+
+  ## Régulation de température
+
+  La régulation de la température du fermenteur se fait à l’aide d’une carte BrewBlox qui va piloter des électrovannes pour réguler le flux d’arrivée du froid. Celles-ci doivent être placées à proximité du fermenteur.
+  Un capteur de température (qui rentre dans le fermenteur) est également connecté à la carte BrewBlow.
+
+  ## Détails sur la matériel
+  Pour la **pompe de circulation**, utilisez une pompe de service continu, alimentée en 12V, immergeable, avec une entrée sur le côté et la sortie vers le haut *(Par exemple, une pompe de chauffe eau solaire)*.
+
+// Bloc de recommandation
+.ui.container
+  .ui.icon.message.green.block-center
+    i.thumbs.up.outline.icon
+    .content
+      .header Recommandation
+      p Gamme Topsflo <i>(Pression minimale : 0,5 bar / Débit minimum : 8L/min)</i>
+
+:markdown-it(html=true)
+  
+  En ce qui concerne le **circuit de distribution**, 2 nourrices *(départ et retour)* de chauffage central sont utilisées.
+  Les tubes utilisés sont des tubes en silicone, peu chers, flexibles et faciles à utiliser.
+  
+  ## Schéma de fonctionnement
+
+
+template#page-footer
+  style(type='text/css').
+    .pdfheader {
+      font-size: 10px;
+      color: #aaa;
+      font-family: Helvetica;
+      font-weight: bold;
+      width: 1000px;
+      border-top: 1px solid #aaa;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-top: 1mm;
+      margin-bottom: -1mm;
+      text-align: center;
+    }
+  
+  .pdfheader Page #[span.pageNumber] / #[span.totalPages]
+
+style
+  include:scss guide.scss
