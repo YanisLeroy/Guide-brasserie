@@ -15,6 +15,10 @@ h1#title Le Système de Refroidissement
   - Une **tireuse à bière de bar** en retirant les serpentins à l’intérieur.
   - Une **pompe de circulation**.
 
+  Il peut être utile d’utiliser un réfractomètre (spécial glycol) pour déterminer la quantité de glycol nécessaire pour atteindre une température précise
+.illustration.ui.raised.segment
+  img(src="images/glycol_temp.png")
+
 // Bloc d'information
 .ui.container
   .ui.icon.message.blue.block-center
@@ -36,6 +40,7 @@ h1#title Le Système de Refroidissement
         li Ce système fonctionne si la température moyenne ambiante est <b>tempérée</b> <i>(environ 20°C par exemple)</i>. S’il fait trop chaud, ce ne sera pas suffisant.
         li Pour le groupe froid, la pompe utilisée pour le départ de l'eau froide <b>doit être placée le plus loin possible du point de retour</b> <i>(afin de ne pas créer de boucle et de réutiliser toujours la même eau)</i>.
         li <b>Ne pas placer le groupe froid à côté d'un mur et/ou à côté de la cuve à refroidir</b> car le système dégage beaucoup de chaleur. Il faut faire en sorte que la chaleur soit bien évacuée.
+        li <b>Le flux d’eau froide doit arriver par le bas du fermenteur afin de ne pas créer de bulles d’air. La sortie, quant à elle, doit s’effectuer par le haut du fermenteur.</b>
 
 
 :markdown-it(html=true)
@@ -57,16 +62,117 @@ h1#title Le Système de Refroidissement
       p Gamme Topsflo <i>(Pression minimale : 0,5 bar / Débit minimum : 8L/min)</i>
 
 :markdown-it(html=true)
-  En ce qui concerne le **circuit de distribution**, 2 nourrices *(départ et retour)* de chauffage central sont utilisées.
+  En ce qui concerne le **circuit de distribution**, 2 nourrices *(départ et retour)* de chauffage central sont utilisées. Utiliser des nourrices avec des vannes d’arrêt pour faciliter la maintenance. 
   Les tubes utilisés sont des tubes en silicone, peu chers, flexibles et faciles à utiliser.
   
-  ## Schéma de fonctionnement
+  ## Schéma de fonctionnement général
 
 .illustration.ui.raised.segment
-    img(src="images/schema-fonctionnement.png")
+  img(src="images/schema-fonctionnement.png")
+
+:markdown-it
+  ## Raccordements
+
+
+  Pour les raccords réalisés, utiliser des joints EPDM de préférence, ou bien des joints de plomberie. Pour les raccord qui n’ont pas de fond plat, enrouler du téflon autour (utiliser du téflon haute densité et ne pas faire plus de 4 tours pour assurer une bonne étanchéité).
+
+.illustration.ui.raised.segment
+    img(src="images/schema-electrovanne.png")
 
 :markdown-it(html=true)
   ## Inventaire des pièces nécessaires
+
+figure.block-center
+  table.ui.celled.table
+    thead
+      tr
+        th Pièce
+        th Référence / Marchand
+        th Prix moyen unitaire HT
+        th Quantité minimale estimée (pour 1 fermenteur)
+        th Prix moyen HT x quantité
+        th Image
+    tbody
+      tr
+        td Tube en silicone (en mètres)
+        td https://store.brewpi.com/featured/silone-hose-tubing-fda-grade-12mm-id-20mm-od
+        td 5,00 €
+        td 50
+        td 250,00 €
+        td <img src="images/tuyau.png" />
+      tr
+        td Réducteur 1" - 1/2"
+        td https://discount-plomberie.com/raccords-laiton-a-visser/290-mamelon-reduit-laiton-a-visser.html?bt_product_attribute=5911&gclid=Cj0KCQiAoIPvBRDgARIsAHsCw0-RT4tw0Vu9BfUNOCYRTM4Cmjycxf5BkhwTaDgs1y62Uk9EvJvv0IQaAsixEALw_wcB#
+        td 4,00 €
+        td 2
+        td 8,00 €
+        td <img src="images/mamelon-reduit.png" />
+      tr
+        td Adaptateur 1/2"
+        td https://fr.rs-online.com/web/p/adaptateurs-filetes-droits/3675641/
+        td 16,00 €
+        td 2
+        td 32,00 €
+        td <img src="images/raccord-1_2.png" />
+      tr
+        td Electrovanne
+        td https://fr.rs-online.com/web/p/electrovannes/0342023/
+        td 17,00 €
+        td 1
+        td 17,00 €
+        td <img src="images/electrovanne.png" />
+      tr
+        td Pompe (jusqu'à 4 fermenteurs)
+        td http://www.topsflo.com/dc-brushless-pump/tl-c01.html
+        td 40,00 €
+        td 1
+        td 40,00 €
+        td <img src="images/pompe.png" />
+      tr 
+        td Nourrice-Collecteur
+        td https://www.manomano.fr/p/collecteur-simple-composable-avec-vanne-darret-caleffi-354-5-derivazioni-6299611
+        td 20,00 €
+        td 2
+        td 40,00 €
+        td <img src="images/nourrice.jpg" />
+      tr 
+        td Réducteur 3/4" - 1/2"
+        td https://www.manomano.fr/p/reduction-femelle-femelle-raccords-6111012?model_id=6111013
+        td 5,00 €
+        td 6
+        td 30,00 €
+        td <img src="images/reducteur-3_4-1_2.png" />
+      tr 
+        td Capteur température fermenteur
+        td https://store.brewpi.com/featured/wall-mounted-onewire-temperature-sensor-for-kettle-or-fementor-bsp
+        td 32,00 €
+        td 1
+        td 32,00 €
+        td <img src="images/capt-temp.png" />
+      tr
+        td BrewBlox (jusqu'à 2 fermenteurs)
+        td https://store.brewpi.com/featured/brewpi-spark-3
+        td 139,00 €
+        td 1
+        td 139,00 €
+        td <img src="images/brewblox.png" />
+      tr
+        td Tireuse à bière (fait office de machine à froid)
+        td http://www.piecesfrigo.com/refroidisseur-d-eau-inox-oprema-avec-pompe-12-20-m-c2x29085116
+        td 865,00 €
+        td 1
+        td 865,00 €
+        td <img src="images/tireuse-biere.png" />
+      tr
+        td Collier
+        td https://www.leroymerlin.fr/v3/p/produits/lot-de-5-colliers-simples-isophoniques-l-1-8-cm-diam-12-mm-e8533
+        td 2,00 €
+        td 2
+        td 4,00 €
+        td <img src="images/collier.png" />
+:markdown-it(html=true)
+h2 <center>Total : 1 457,00 €</center>
+
 
 template#page-footer
   style(type='text/css').
